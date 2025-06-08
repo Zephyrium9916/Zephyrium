@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MSG_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyBNOD9EHFQcLBZcml-TJvYw9JPre1sFtH4",
+  authDomain: "zephyrium-web.firebaseapp.com",
+  projectId: "zephyrium-web",
+  storageBucket: "zephyrium-web.firebasestorage.app",
+  messagingSenderId: "362366737290",
+  appId: "1:362366737290:web:879a06cef5e4c0dc31c673",
 };
 
 const app = initializeApp(firebaseConfig);
