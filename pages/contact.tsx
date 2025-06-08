@@ -1,41 +1,76 @@
-import React from 'react';
+import { useState } from 'react';
+import { db } from '../firebase/firebaseConfig';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-const Contact: React.FC = () => {
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Submitting...');
+
+    try {
+      await addDoc(collection(db, 'messages'), {
+        ...formData,
+        timestamp: Timestamp.now(),
+      });
+      setStatus('Message sent! ✅');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      setStatus('❌ Error sending message');
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-      <p className="mb-4 max-w-xl text-center">
-        For inquiries, support, or feedback, please reach out to us at:
-      </p>
-      <p className="mb-8 font-mono">support@zephyrium.com</p>
-      <form className="w-full max-w-md flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="p-3 rounded bg-gray-800 text-white border border-gray-600"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="p-3 rounded bg-gray-800 text-white border border-gray-600"
-          required
-        />
-        <textarea
-          placeholder="Your Message"
-          className="p-3 rounded bg-gray-800 text-white border border-gray-600 resize-none"
-          rows={5}
-          required
-        />
-        <button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-500 text-white py-3 rounded font-semibold"
-        >
-          Send Message
-        </button>
-      </form>
-    </main>
+    <div className="min-h-screen flex flex-col bg-gray-100">
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center px-6 py-16">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-4">
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md h-32 resize-none"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition"
+          >
+            Send
+          </button>
+          {status && <p className="text-center text-sm text-gray-600">{status}</p>}
+        </form>
+      </main>
+      <Footer />
+    </div>
   );
-};
-
-export default Contact;
+}
