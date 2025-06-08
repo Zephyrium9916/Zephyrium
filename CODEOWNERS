@@ -1,0 +1,17 @@
+# Global fallback owner (you)
+*                       @Zephyrium9916
+
+# Protect secrets and infra
+firebase.json           @Zephyrium9916
+.env                    @Zephyrium9916
+**/*.json               @Zephyrium9916
+
+# Frontend
+/src/components/        @frontend-dev-team
+/src/pages/             @frontend-dev-team
+
+# Backoffice / Admin
+/admin/                 @security-team
+
+# Workflows
+.github/workflows/      @Zephyrium9916
