@@ -1,16 +1,26 @@
-import React from 'react';
+import Link from 'next/link';
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
-    <nav className="w-full px-6 py-4 bg-gray-900 flex justify-between items-center shadow-md">
-      <h1 className="text-xl font-bold tracking-wider">Zephyrium</h1>
-      <div className="space-x-4">
-        <a href="#" className="hover:underline">Home</a>
-        <a href="#" className="hover:underline">Products</a>
-        <a href="#" className="hover:underline">Contact</a>
+    <nav className="bg-gray-900 text-white px-6 py-4 shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <Link href="/">
+          <span className="text-xl font-bold tracking-tight cursor-pointer hover:text-blue-400 transition">
+            Zephyrium
+          </span>
+        </Link>
+        <div className="space-x-6 text-sm sm:text-base">
+          <Link href="/products/endpoint-security" className="hover:text-blue-400 transition">
+            Endpoint Security
+          </Link>
+          <Link href="/contact" className="hover:text-blue-400 transition">
+            Contact
+          </Link>
+          <Link href="/admin" className="hover:text-blue-400 transition">
+            Admin
+          </Link>
+        </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
