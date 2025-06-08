@@ -41,7 +41,7 @@ export default function Contact() {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800"
             required
           />
           <input
@@ -50,7 +50,7 @@ export default function Contact() {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800"
             required
           />
           <textarea
@@ -58,7 +58,7 @@ export default function Contact() {
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md h-32 resize-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md h-32 resize-none text-gray-800"
             required
           />
           <button
