@@ -17,10 +17,13 @@ export default function Contact() {
     setStatus('Submitting...');
 
     try {
-      await addDoc(collection(db, 'messages'), {
-        ...formData,
-        timestamp: Timestamp.now(),
+      const docRef = await addDoc(collection(db, 'contacts'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        createdAt: Timestamp.now(),
       });
+      console.log("Document written with ID: ", docRef.id);
       setStatus('Message sent! ✅');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
