@@ -1,0 +1,182 @@
+[debug] [2025-06-10T16:50:14.822Z] ----------------------------------------------------------------------
+[debug] [2025-06-10T16:50:14.860Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fizzy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-06-10T16:50:14.867Z] CLI Version:   14.6.0
+[debug] [2025-06-10T16:50:14.869Z] Platform:      win32
+[debug] [2025-06-10T16:50:14.871Z] Node Version:  v22.15.0
+[debug] [2025-06-10T16:50:14.875Z] Time:          Tue Jun 10 2025 17:50:14 GMT+0100 (West Africa Standard Time)
+[debug] [2025-06-10T16:50:14.877Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-10T16:50:14.978Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-10T16:50:14.983Z] > authorizing via signed-in user (chicoajsmith@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\fizzy\Documents\New folder\Zephyrium
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-10T16:52:04.635Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:04.641Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:04.657Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-06-10T16:52:06.166Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-06-10T16:52:06.169Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project zephyrium-web (Zephyrium Web) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-06-10T16:52:10.461Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:10.462Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:10.464Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/zephyrium-web/billingInfo [none]
+[debug] [2025-06-10T16:52:11.635Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/zephyrium-web/billingInfo 200
+[debug] [2025-06-10T16:52:11.635Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/zephyrium-web/billingInfo {"name":"projects/zephyrium-web/billingInfo","projectId":"zephyrium-web","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-06-10T16:52:11.653Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:11.654Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:11.654Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/sqladmin.googleapis.com [none]
+[debug] [2025-06-10T16:52:11.654Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/sqladmin.googleapis.com x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:52:13.009Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/sqladmin.googleapis.com 200
+[debug] [2025-06-10T16:52:13.009Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[debug] [2025-06-10T16:52:13.028Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:13.029Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:52:13.029Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/zephyrium-web/locations/-/services [none]
+[debug] [2025-06-10T16:52:14.597Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/zephyrium-web/locations/-/services 200
+[debug] [2025-06-10T16:52:14.598Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/zephyrium-web/locations/-/services {}
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] +  Detected WEB app in directory C:\Users\fizzy\Documents\New folder\Zephyrium 
+[info] i  Detected react app. Enabling react generated SDKs. 
+[info] i  Writing your new SDK configuration to C:\Users\fizzy\Documents\New folder\Zephyrium\dataconnect\connector/connector.yaml 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[debug] [2025-06-10T16:52:39.585Z] defaultcredentials: writing to file C:\Users\fizzy\AppData\Roaming\firebase\chicoajsmith_gmail_com_application_default_credentials.json
+[info] I0610 17:53:10.462896    3608 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\fizzy\\Documents\\New folder\\Zephyrium\\dataconnect-generated\\js\\default-connector"
+I0610 17:53:11.195578    3608 generate.go:40] Generated all sources. Writing them to disk...
+I0610 17:53:11.201780    3608 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\fizzy\\Documents\\New folder\\Zephyrium\\dataconnect-generated\\js\\default-connector"
+Generated sources: esm\package.json [17B] package.json [860B] README.md [2774B] react\package.json [468B] react\esm\package.json [17B] react\index.cjs.js [0B] react\esm\index.esm.js [0B] index.d.ts [246B] index.cjs.js [147B] react\index.d.ts [228B] react\README.md [5357B] esm\index.esm.js [112B] 
+I0610 17:53:12.037630    3608 installsdk.go:80] Running command: C:\Program Files\nodejs\npm.cmd install file:dataconnect-generated\js\default-connector
+
+[info] i  Generated SDK code for default 
+[info] i  Visit https://firebase.google.com/docs/data-connect/web-sdk#react for more information on how to set up React Generated SDKs for Firebase Data Connect 
+[info] +  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/zephyrium-web/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-06-10T16:53:42.178Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:53:42.179Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:53:42.179Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/firestore.googleapis.com [none]
+[debug] [2025-06-10T16:53:42.180Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/firestore.googleapis.com x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:53:43.393Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/firestore.googleapis.com 200
+[debug] [2025-06-10T16:53:43.393Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/firestore.googleapis.com [omitted]
+[info] +  firestore: required API firestore.googleapis.com is enabled 
+[debug] [2025-06-10T16:53:43.395Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:53:43.395Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:53:43.395Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases [none]
+[debug] [2025-06-10T16:53:44.479Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases 200
+[debug] [2025-06-10T16:53:44.481Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases {"databases":[{"name":"projects/zephyrium-web/databases/(default)","uid":"01974a61-b402-4157-a0ea-405bfd06ced4","createTime":"2025-06-08T08:59:31.183061Z","updateTime":"2025-06-08T08:59:31.183061Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-06-10T15:53:44.781212Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"etag":"IPLa0tCo540DMJn1xoa74Y0D"}]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-06-10T16:55:03.173Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:03.174Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:03.174Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/releases pageSize=10&pageToken=
+[debug] [2025-06-10T16:55:05.386Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/releases 200
+[debug] [2025-06-10T16:55:05.386Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/releases {"releases":[{"name":"projects/zephyrium-web/releases/cloud.firestore","rulesetName":"projects/zephyrium-web/rulesets/b230ff18-fb6b-42bd-b84e-07512e99f12b","createTime":"2025-06-08T08:59:34.908945Z","updateTime":"2025-06-08T14:25:12.476375Z"}]}
+[debug] [2025-06-10T16:55:05.387Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:05.387Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:05.387Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/rulesets/b230ff18-fb6b-42bd-b84e-07512e99f12b [none]
+[debug] [2025-06-10T16:55:06.377Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/rulesets/b230ff18-fb6b-42bd-b84e-07512e99f12b 200
+[debug] [2025-06-10T16:55:06.378Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/zephyrium-web/rulesets/b230ff18-fb6b-42bd-b84e-07512e99f12b [omitted]
+[info] i  Downloaded the existing Firestore Security Rules from the Firebase console 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-06-10T16:55:09.332Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:09.332Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:09.333Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:09.333Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:55:09.334Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-06-10T16:55:09.359Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-06-10T16:55:10.745Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-06-10T16:55:10.746Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/zephyrium-web/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2025-06-10T16:55:10.747Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-06-10T16:55:10.748Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/zephyrium-web/databases/(default)/collectionGroups/-/indexes {}
+[info] i  Downloaded the existing Firestore indexes from the Firebase console 
+[info] +  Wrote firestore.rules 
+[info] +  Wrote firestore.indexes.json 
+[info] 
+=== Genkit Setup
+[debug] [2025-06-10T16:58:15.805Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-10T16:58:15.806Z] > authorizing via signed-in user (chicoajsmith@gmail.com)
+[debug] [2025-06-10T16:58:15.806Z] [iam] checking project zephyrium-web for permissions ["firebase.projects.get"]
+[debug] [2025-06-10T16:58:15.807Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:15.807Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:15.807Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/zephyrium-web:testIamPermissions [none]
+[debug] [2025-06-10T16:58:15.808Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/zephyrium-web:testIamPermissions x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:58:15.810Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zephyrium-web:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-10T16:58:16.980Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/zephyrium-web:testIamPermissions 200
+[debug] [2025-06-10T16:58:16.980Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zephyrium-web:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-10T16:58:16.981Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:16.981Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:16.981Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:16.982Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:16.982Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-10T16:58:16.982Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:58:16.987Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-06-10T16:58:16.987Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:58:18.471Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/runtimeconfig.googleapis.com 200
+[debug] [2025-06-10T16:58:18.472Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-06-10T16:58:18.473Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com 200
+[debug] [2025-06-10T16:58:18.474Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-06-10T16:58:18.474Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:18.475Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:18.475Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-06-10T16:58:18.475Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:58:19.226Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-06-10T16:58:19.227Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2025-06-10T16:58:29.285Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:29.288Z] Checked if tokens are valid: true, expires at: 1749576749487
+[debug] [2025-06-10T16:58:29.291Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-10T16:58:29.293Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/zephyrium-web
+[debug] [2025-06-10T16:58:30.611Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com 200
+[debug] [2025-06-10T16:58:30.613Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/zephyrium-web/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.12.0
+ 
